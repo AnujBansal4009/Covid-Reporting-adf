@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "covid-adf-4009"
+		},
+		"ls_ablob_covidreportingsa4009_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_ablob_covidreportingsa4009'"
+		},
+		"ls_adls_dlcovidreportingsa4009_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_adls_dlcovidreportingsa4009'"
+		},
+		"ls_adls_dlcovidreportingsa4009_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://dlcovidreportsa4009.dfs.core.windows.net/"
+		},
+		"ls_opendata_ecdv_europe_eu_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "@{linkedService().baseURL}"
+		},
+		"tr_ingest_population_data_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/7c6385c2-1d63-4d3c-8ac1-c149741c3855/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa4009"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "covid-adf-4009_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_ablob_covidreportingsa4009_connectionString": {
+						"value": "[parameters('ls_ablob_covidreportingsa4009_connectionString')]"
+					},
+					"ls_adls_dlcovidreportingsa4009_accountKey": {
+						"value": "[parameters('ls_adls_dlcovidreportingsa4009_accountKey')]"
+					},
+					"ls_adls_dlcovidreportingsa4009_properties_typeProperties_url": {
+						"value": "[parameters('ls_adls_dlcovidreportingsa4009_properties_typeProperties_url')]"
+					},
+					"ls_opendata_ecdv_europe_eu_properties_typeProperties_url": {
+						"value": "[parameters('ls_opendata_ecdv_europe_eu_properties_typeProperties_url')]"
+					},
+					"tr_ingest_population_data_properties_typeProperties_scope": {
+						"value": "[parameters('tr_ingest_population_data_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
