@@ -1,5 +1,6 @@
 {
 	"name": "ls_opendata_ecdv_europe_eu",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"parameters": {
 			"baseURL": {
