@@ -48,6 +48,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -138,7 +139,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "dl_population_raw_tsv",
+									"referenceName": "ds_population_raw_tsv",
 									"type": "DatasetReference"
 								}
 							]

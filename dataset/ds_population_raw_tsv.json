@@ -1,5 +1,5 @@
 {
-	"name": "dl_population_raw_tsv",
+	"name": "ds_population_raw_tsv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls_dlcovidreportingsa4009",
