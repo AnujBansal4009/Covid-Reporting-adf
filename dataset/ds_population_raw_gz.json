@@ -1,5 +1,5 @@
 {
-	"name": "ds_popluation_raw_gz",
+	"name": "ds_population_raw_gz",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_ablob_covidreportingsa4009",

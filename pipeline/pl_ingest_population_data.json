@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_popluation_raw_gz",
+						"referenceName": "ds_population_raw_gz",
 						"type": "DatasetReference"
 					},
 					"timeout": "0.00:00:59",
@@ -38,7 +38,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_popluation_raw_gz",
+						"referenceName": "ds_population_raw_gz",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -48,7 +48,6 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
-						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -133,7 +132,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_popluation_raw_gz",
+									"referenceName": "ds_population_raw_gz",
 									"type": "DatasetReference"
 								}
 							],
@@ -165,7 +164,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
-									"referenceName": "ds_popluation_raw_gz",
+									"referenceName": "ds_population_raw_gz",
 									"type": "DatasetReference"
 								},
 								"enableLogging": false,
