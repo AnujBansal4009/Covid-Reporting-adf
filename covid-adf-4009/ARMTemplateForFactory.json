@@ -1203,18 +1203,22 @@
 						"     skipDuplicateMapOutputs: true) ~> selectForDailySInk",
 						"selectForWeeklySInk sink(allowSchemaDrift: true,",
 						"     validateSchema: false,",
+						"     partitionFileNames:['hospital_admissions_weekly'],",
 						"     umask: 0022,",
 						"     preCommands: [],",
 						"     postCommands: [],",
 						"     skipDuplicateMapInputs: true,",
-						"     skipDuplicateMapOutputs: true) ~> sinkWeekly",
+						"     skipDuplicateMapOutputs: true,",
+						"     partitionBy('hash', 1)) ~> sinkWeekly",
 						"selectForDailySInk sink(allowSchemaDrift: true,",
 						"     validateSchema: false,",
+						"     partitionFileNames:['hospital_admissions_daily'],",
 						"     umask: 0022,",
 						"     preCommands: [],",
 						"     postCommands: [],",
 						"     skipDuplicateMapInputs: true,",
-						"     skipDuplicateMapOutputs: true) ~> sinkDaily"
+						"     skipDuplicateMapOutputs: true,",
+						"     partitionBy('hash', 1)) ~> sinkDaily"
 					]
 				}
 			},
