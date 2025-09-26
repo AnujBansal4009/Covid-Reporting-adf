@@ -14,6 +14,9 @@
 		"ls_DB_covid_cluster_accessToken": {
 			"value": ""
 		},
+		"ls_sql_covid_db_password": {
+			"value": ""
+		},
 		"ls_adls_dlcovidreportingsa4009_properties_typeProperties_url": {
 			"value": "https://dlcovidreportsa4009.dfs.core.windows.net/"
 		},
@@ -22,6 +25,18 @@
 		},
 		"tr_ingest_population_data_properties_typeProperties_scope": {
 			"value": "/subscriptions/7c6385c2-1d63-4d3c-8ac1-c149741c3855/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa4009"
+		},
+		"ls_DB_covid_cluster_properties_typeProperties_existingClusterId": {
+			"value": "0925-121545-ttldx8l7"
+		},
+		"ls_sql_covid_db_properties_typeProperties_server": {
+			"value": "covid-server-4009.database.windows.net"
+		},
+		"ls_sql_covid_db_properties_typeProperties_database": {
+			"value": "covid-reporting-db"
+		},
+		"ls_sql_covid_db_properties_typeProperties_userName": {
+			"value": "adm"
 		},
 		"containerUri": {
 			"value": ""
