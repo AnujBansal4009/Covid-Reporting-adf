@@ -23,9 +23,6 @@
 		"ls_opendata_ecdv_europe_eu_properties_typeProperties_url": {
 			"value": "@{linkedService().baseURL}"
 		},
-		"tr_ingest_population_data_properties_typeProperties_scope": {
-			"value": "/subscriptions/7c6385c2-1d63-4d3c-8ac1-c149741c3855/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa4009"
-		},
 		"ls_DB_covid_cluster_properties_typeProperties_existingClusterId": {
 			"value": "0925-121545-ttldx8l7"
 		},
@@ -37,6 +34,9 @@
 		},
 		"ls_sql_covid_db_properties_typeProperties_userName": {
 			"value": "adm"
+		},
+		"tr_execut_population_data_properties_typeProperties_scope": {
+			"value": "/subscriptions/4a88ad66-1af4-4f0d-a1c9-f4cf594877df/resourceGroups/covid19-rg/providers/Microsoft.Storage/storageAccounts/covidreportsa4009"
 		}
 	}
 }

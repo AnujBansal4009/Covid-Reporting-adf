@@ -31,10 +31,6 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().baseURL}"
 		},
-		"tr_ingest_population_data_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/7c6385c2-1d63-4d3c-8ac1-c149741c3855/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa4009"
-		},
 		"ls_DB_covid_cluster_properties_typeProperties_existingClusterId": {
 			"type": "string",
 			"defaultValue": "0925-121545-ttldx8l7"
@@ -50,6 +46,10 @@
 		"ls_sql_covid_db_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "adm"
+		},
+		"tr_execut_population_data_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/4a88ad66-1af4-4f0d-a1c9-f4cf594877df/resourceGroups/covid19-rg/providers/Microsoft.Storage/storageAccounts/covidreportsa4009"
 		},
 		"containerUri": {
 			"type": "string",
@@ -126,8 +126,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"tr_ingest_population_data_properties_typeProperties_scope": {
-						"value": "[parameters('tr_ingest_population_data_properties_typeProperties_scope')]"
+					"tr_execut_population_data_properties_typeProperties_scope": {
+						"value": "[parameters('tr_execut_population_data_properties_typeProperties_scope')]"
 					}
 				}
 			},
